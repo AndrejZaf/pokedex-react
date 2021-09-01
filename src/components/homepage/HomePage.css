@@ -1,0 +1,127 @@
+.custom-container {
+  height: 250px;
+  background-image: url("../../static/images/pokemon-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.custom-input {
+  width: 400px !important;
+}
+
+.btn-warning {
+  background-color: #ffce4b !important;
+  font-weight: 600;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fad368 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(250 211 104 / 25%) !important;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: unset !important;
+  padding-right: unset !important;
+  background-image: unset !important;
+  background-repeat: no-repeat !important;
+  background-position: unset !important;
+  background-size: unset !important;
+}
+
+@media (min-width: 576px) {
+  .search-bar {
+    width: 250px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    width: 450px;
+    margin-bottom: 40px;
+  }
+}
+
+.bg-purple {
+  background-color: #7b548b;
+  border-radius: 30px;
+}
+
+.bg-blue {
+  border-radius: 30px;
+  background-color: #59acf4;
+}
+
+.bg-white-new {
+  background-color: #f4f5f4;
+  border-radius: 30px;
+}
+
+.btn-outline-purple {
+  color: #7b548b !important;
+  border-color: #7b548b !important;
+}
+
+.btn-check:active + .btn-outline-purple,
+.btn-check:checked + .btn-outline-purple,
+.btn-outline-purple.active,
+.btn-outline-purple.dropdown-toggle.show,
+.btn-outline-purple:active {
+  color: #fff !important;
+  background-color: #7b548b !important;
+  border-color: #7b548b !important;
+}
+
+.btn-outline-purple:hover {
+  color: #fff !important;
+  background-color: #7b548b !important;
+  border-color: #7b548b !important;
+}
+
+.btn-outline-blue {
+  color: #59acf4 !important;
+  border-color: #59acf4 !important;
+}
+
+.btn-check:active + .btn-outline-blue,
+.btn-check:checked + .btn-outline-blue,
+.btn-outline-blue.active,
+.btn-outline-blue.dropdown-toggle.show,
+.btn-outline-blue:active {
+  color: #fff !important;
+  background-color: #59acf4 !important;
+  border-color: #59acf4 !important;
+}
+
+.btn-outline-blue:hover {
+  color: #fff !important;
+  background-color: #59acf4 !important;
+  border-color: #59acf4 !important;
+}
+
+.btn-outline-white {
+  color: #000 !important;
+  border-color: #d4d4d4 !important;
+}
+
+.btn-check:active + .btn-outline-white,
+.btn-check:checked + .btn-outline-white,
+.btn-outline-white.active,
+.btn-outline-white.dropdown-toggle.show,
+.btn-outline-white:active {
+  color: #000 !important;
+  background-color: #f4f5f4 !important;
+  border-color: #000 !important;
+}
+
+.btn-outline-white:hover {
+  color: #000 !important;
+  background-color: #f4f5f4 !important;
+  border-color: #000 !important;
+}

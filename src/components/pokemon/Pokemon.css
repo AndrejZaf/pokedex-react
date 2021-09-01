@@ -1,0 +1,260 @@
+html {
+  overflow-y: scroll;
+}
+
+.top-container {
+  height: 400px;
+}
+.bottom-container {
+  margin-top: -40px;
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding-top: 70px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.pokemon-image {
+  width: 250px;
+}
+
+.pokemon-background-color-red {
+  background-color: #fb6c6c;
+  border: 1px solid #fdb0b0;
+  color: white;
+}
+
+.flat-color-red {
+  border-bottom: 2px solid #fb6c6c;
+}
+
+.pokemon-badge-background-red {
+  color: white;
+  background-color: #fc9c9c;
+}
+
+.pokemon-background-color-blue {
+  border: 1px solid #9fcff9;
+  background-color: #59acf4;
+  color: white;
+}
+
+.flat-color-blue {
+  border-bottom: 2px solid #59acf4;
+}
+
+.pokemon-badge-background-blue {
+  color: white;
+  background-color: #87bbe8;
+}
+
+.pokemon-background-color-purple {
+  background-color: #7b548b;
+  border-bottom: 2px solid #b699c2;
+  color: white;
+}
+
+.flat-color-purple {
+  border-bottom: 2px solid #7b548b;
+}
+
+.pokemon-badge-background-purple {
+  color: white;
+  background-color: #9b73ab;
+}
+
+.pokemon-background-color-yellow {
+  background-color: #ffce4b;
+  border: 1px solid #ffe499;
+  color: white;
+}
+
+.flat-color-yellow {
+  border-bottom: 2px solid #ffce4b;
+}
+
+.pokemon-badge-background-yellow {
+  color: white;
+  background-color: #ffde85;
+}
+
+.pokemon-background-color-green {
+  border: 1px solid #8de2ce;
+  background-color: #49d0b0;
+  color: white;
+}
+
+.flat-color-green {
+  border-bottom: 2px solid #8de2ce;
+}
+
+.pokemon-badge-background-green {
+  color: white;
+  background-color: #7ddec7;
+}
+
+.pokemon-background-color-brown {
+  background-color: #b1736c;
+  border-bottom: 2px solid #b1736c;
+  color: white;
+}
+
+.flat-color-brown {
+  border-bottom: 2px solid #b1736c;
+}
+
+.pokemon-badge-background-brown {
+  color: white;
+  background-color: #c08c87;
+}
+
+.pokemon-background-color-white > .pokemon-name {
+  color: black;
+}
+
+.pokemon-background-color-white {
+  background-color: #f4f5f4;
+  border: 1px solid #ffffff;
+  color: black;
+}
+
+.flat-color-white {
+  border-bottom: 2px solid #f4f5f4;
+}
+
+.pokemon-badge-background-white {
+  color: black !important;
+  background-color: #dfe2df;
+}
+
+.pokemon-background-color-black {
+  background-color: #383a38;
+  border: 1px solid #787d78;
+  color: white;
+}
+
+.flat-color-black {
+  border-bottom: 2px solid #383a38;
+}
+
+.pokemon-badge-background-black {
+  color: white;
+  background-color: #505350;
+}
+
+.pokemon-background-color-pink {
+  background-color: #f89997;
+  border-bottom: 2px solid #fadddb;
+  color: white;
+}
+
+.flat-color-pink {
+  border-bottom: 2px solid #f89997;
+}
+
+.pokemon-badge-background-pink {
+  color: white;
+  background-color: #f5b9b5;
+}
+
+.pokemon-background-color-gray {
+  background-color: #949a94;
+  border: 1px solid #c0c4c0;
+  color: white;
+}
+
+.flat-color-gray {
+  border-bottom: 2px solid #949a94;
+}
+
+.pokemon-badge-background-gray {
+  color: white;
+  background-color: #c2cac2;
+}
+
+.custom-button {
+  margin: 0.25rem 0.125rem;
+  padding: 0.5rem 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.bottom-content {
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.ability-list {
+  list-style-type: none;
+}
+
+.ability {
+  text-transform: capitalize;
+}
+
+.progress-bar .bg-danger {
+  width: 100%;
+}
+
+.pokemon-name {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.pokemon-type {
+  margin-right: 10px;
+}
+
+.progress-bar-red {
+  background-color: #fb6c6c !important;
+}
+
+.progress-bar-green {
+  background-color: #49d0b0 !important;
+}
+
+.progress-bar-orange {
+  background-color: #ff7f11 !important;
+}
+
+.progress-bar-yellow {
+  background-color: #ffce4b !important;
+}
+
+.progress-bar-blue {
+  background-color: #59acf4 !important;
+}
+
+.progress-bar-pink {
+  background-color: #ff758f !important;
+}
+
+.progress-bar-black {
+  background-color: #383a38 !important;
+}
+
+.left-text {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.right-text {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.stat-name {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.base-stat {
+  font-weight: 500;
+}

@@ -1,0 +1,141 @@
+.custom-img-size {
+  width: 100px;
+  float: right;
+}
+
+.custom-card {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.badge-list {
+  list-style-type: none;
+  padding: unset;
+  margin: unset;
+}
+
+.badge-item {
+  text-transform: capitalize;
+  color: white;
+}
+
+.badge {
+  border-radius: 30px;
+}
+
+.background-card-red {
+  background-color: #fb6c6c;
+  border: 1px solid #fdb0b0;
+  color: white;
+}
+
+.badge-background-red {
+  color: white;
+  background-color: #fc9c9c;
+}
+
+.background-card-blue {
+  border: 1px solid #9fcff9;
+  background-color: #59acf4;
+  color: white;
+}
+
+.badge-background-blue {
+  color: white;
+  background-color: #87bbe8;
+}
+
+.background-card-purple {
+  background-color: #7b548b;
+  border: 1px solid #b699c2;
+  color: white;
+}
+
+.badge-background-purple {
+  color: white;
+  background-color: #9b73ab;
+}
+
+.background-card-yellow {
+  background-color: #ffce4b;
+  border: 1px solid #ffe499;
+  color: white;
+}
+
+.badge-background-yellow {
+  color: white;
+  background-color: #ffde85;
+}
+
+.background-card-green {
+  border: 1px solid #8de2ce;
+  background-color: #49d0b0;
+  color: white;
+}
+
+.badge-background-green {
+  color: white;
+  background-color: #7ddec7;
+}
+
+.background-card-brown {
+  background-color: #b1736c;
+  border: 1px solid #b1736c;
+  color: white;
+}
+
+.badge-background-brown {
+  color: white;
+  background-color: #c08c87;
+}
+
+.background-card-white {
+  background-color: #f4f5f4;
+  border: 1px solid #ffffff;
+  color: black;
+}
+
+.badge-background-white {
+  color: black !important;
+  background-color: #dfe2df;
+}
+
+.background-card-black {
+  background-color: #383a38;
+  border: 1px solid #787d78;
+  color: white;
+}
+
+.badge-background-black {
+  color: white;
+  background-color: #505350;
+}
+
+.background-card-pink {
+  background-color: #f89997;
+  border: 1px solid #fadddb;
+  color: white;
+}
+
+.badge-background-pink {
+  color: white;
+  background-color: #f5b9b5;
+}
+
+.background-card-gray {
+  background-color: #949a94;
+  border: 1px solid #c0c4c0;
+  color: white;
+}
+
+.badge-background-gray {
+  color: white;
+  background-color: #c2cac2;
+}
