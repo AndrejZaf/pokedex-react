@@ -29,7 +29,6 @@ export default function HomePage(props) {
 
   function onHandlesubmit(event) {
     event.preventDefault();
-    console.log(searchBarValue);
     if (allPokemons.indexOf(searchBarValue.toLowerCase()) === -1) {
       setFormError(true);
     } else {
@@ -80,10 +79,7 @@ export default function HomePage(props) {
                   Please select a Pokemon from the list.
                 </div>
                 {autoFillData.length !== 0 ? (
-                  <datalist
-                    id="datalistOptions"
-                    onClick={() => console.log("datalist clicked")}
-                  >
+                  <datalist id="datalistOptions">
                     {autoFillData.map((item) => {
                       return (
                         <option className="text-capitalize" key={item}>
