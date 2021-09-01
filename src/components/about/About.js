@@ -1,5 +1,6 @@
 import React from "react";
 import pokeball from "../../static/images/pokeball-pokemon-svgrepo-com.svg";
+import { Link } from "react-router-dom";
 import "./About.css";
 
 export default function About() {
@@ -28,12 +29,13 @@ export default function About() {
               electronic typesetting, remaining essentially unchanged.
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
+              <Link
+                to="/pokedex"
                 type="button"
                 className="btn btn-warning btn-lg px-4 me-md-2"
               >
                 Pokedex
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -30,9 +30,6 @@ export default function Header() {
               About
             </Link>
           </li>
-          <li>
-            <Link className="nav-link px-2 link-dark">Contact</Link>
-          </li>
         </ul>
 
         <div className="col-md-3 text-end"></div>

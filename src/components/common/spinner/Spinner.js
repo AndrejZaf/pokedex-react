@@ -3,9 +3,9 @@ import "./Spinner.css";
 
 export default function Spinner() {
   return (
-    <div class="center-on-page">
-      <div class="pokeball">
-        <div class="pokeball__button"></div>
+    <div className="center-on-page">
+      <div className="pokeball">
+        <div className="pokeball__button"></div>
       </div>
     </div>
   );
