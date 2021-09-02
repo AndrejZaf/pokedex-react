@@ -4,6 +4,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: -1px;
   z-index: -1;
 }
 
@@ -68,6 +69,27 @@
   border-color: #7b548b !important;
 }
 
+.btn-outline-purple-dark {
+  color: #fff !important;
+  border-color: #7b548b !important;
+}
+
+.btn-check:active + .btn-outline-purple-dark,
+.btn-check:checked + .btn-outline-purple-dark,
+.btn-outline-purple-dark.active,
+.btn-outline-purple-dark.dropdown-toggle.show,
+.btn-outline-purple-dark:active {
+  color: black !important;
+  background-color: #7b548b !important;
+  border-color: #7b548b !important;
+}
+
+.btn-outline-purple-dark:hover {
+  color: white !important;
+  background-color: #7b548b !important;
+  border-color: #7b548b !important;
+}
+
 .btn-check:active + .btn-outline-purple,
 .btn-check:checked + .btn-outline-purple,
 .btn-outline-purple.active,
@@ -82,6 +104,27 @@
   color: #fff !important;
   background-color: #7b548b !important;
   border-color: #7b548b !important;
+}
+
+.btn-outline-blue-dark {
+  color: white !important;
+  border-color: #59acf4 !important;
+}
+
+.btn-check:active + .btn-outline-blue-dark,
+.btn-check:checked + .btn-outline-blue-dark,
+.btn-outline-blue-dark.active,
+.btn-outline-blue-dark.dropdown-toggle.show,
+.btn-outline-blue-dark:active {
+  color: #fff !important;
+  background-color: #59acf4 !important;
+  border-color: #59acf4 !important;
+}
+
+.btn-outline-blue-dark:hover {
+  color: white !important;
+  background-color: #59acf4 !important;
+  border-color: #59acf4 !important;
 }
 
 .btn-outline-blue {
@@ -103,6 +146,27 @@
   color: #fff !important;
   background-color: #59acf4 !important;
   border-color: #59acf4 !important;
+}
+
+.btn-outline-white-dark {
+  color: white !important;
+  border-color: #d4d4d4 !important;
+}
+
+.btn-check:active + .btn-outline-white-dark,
+.btn-check:checked + .btn-outline-white-dark,
+.btn-outline-white-dark.active,
+.btn-outline-white-dark.dropdown-toggle.show,
+.btn-outline-white-dark:active {
+  color: #000 !important;
+  background-color: #f4f5f4 !important;
+  border-color: #000 !important;
+}
+
+.btn-outline-white-dark:hover {
+  color: #000 !important;
+  background-color: #f4f5f4 !important;
+  border-color: #000 !important;
 }
 
 .btn-outline-white {

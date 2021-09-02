@@ -11,6 +11,7 @@ import PokemonAbout from "./subsection/PokemonAbout";
 import PokemonBaseStats from "./subsection/PokemonBaseStats";
 import PokemonMoves from "./subsection/PokemonMoves";
 import Spinner from "../common/spinner/Spinner";
+import useSettings from "../../hooks/useSettings";
 
 export default function Pokemon(props) {
   const [data, setData] = useState({});
@@ -20,6 +21,9 @@ export default function Pokemon(props) {
   const [weightCalculation, setWeightCalculation] = useState({});
   const [heightCalculation, setHeightCalculation] = useState({});
   const [color, setColor] = useState({});
+  const { settings } = useSettings();
+
+  // const { settings } = useSettings();
 
   const [genderRate, setGenderRate] = useState({
     malePercentage: 0,
@@ -187,7 +191,7 @@ export default function Pokemon(props) {
   }
 
   return (
-    <div className="container">
+    <>
       <div
         className={`top-container d-flex align-items-end flex-column ${color.background}`}
       >
@@ -217,13 +221,19 @@ export default function Pokemon(props) {
           alt={data.name}
         />
       </div>
-      <div className="bottom-container">
+      <div
+        className={`${
+          settings.theme === "dark"
+            ? "bottom-container-dark"
+            : "bottom-container"
+        }`}
+      >
         <Subnavigation
           color={color}
           setCurrentActiveButton={setCurrentActiveButton}
         />
         <div className="bottom-content">{renderSection(activeButton)}</div>
       </div>
-    </div>
+    </>
   );
 }

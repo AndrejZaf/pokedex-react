@@ -1,4 +1,5 @@
 import React from "react";
+import useSettings from "../../../hooks/useSettings";
 
 export default function PokemonAbout({
   specieData,
@@ -10,6 +11,8 @@ export default function PokemonAbout({
   happiness,
   experience,
 }) {
+  const { settings } = useSettings();
+
   return (
     <div>
       <div className="pokemon-description">
@@ -17,7 +20,13 @@ export default function PokemonAbout({
         <br />
         {specieData.habitat ? (
           <div className="row">
-            <div className="col-md-2 left-text">Habitat</div>
+            <div
+              className={`col-md-2 ${
+                settings.theme === "dark" ? "left-text-dark" : "left-text"
+              }`}
+            >
+              Habitat
+            </div>
             <div className="col-md-10 right-text">
               {specieData.habitat.name}
             </div>
@@ -25,51 +34,99 @@ export default function PokemonAbout({
         ) : null}
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Shape</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Shape
+          </div>
           <div className="col-md-10 right-text">{shape.name}</div>
         </div>
 
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Color</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Color
+          </div>
           <div className="col-md-10 right-text">{specieData.color.name}</div>
         </div>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Height</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Height
+          </div>
           <div className="col-md-10 right-text">
             {heightCalculation.meters} m - {heightCalculation.foot} ft
           </div>
         </div>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Weight</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Weight
+          </div>
           <div className="col-md-10 right-text">
             {weightCalculation.kilograms} kg - {weightCalculation.lbs} lbs
           </div>
         </div>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Abilities</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Abilities
+          </div>
           <div className="col-md-10 right-text">
             {abilities.map((item) => item.ability.name).join(", ")}
           </div>
         </div>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Happiness</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Happiness
+          </div>
           <div className="col-md-10 right-text">{happiness}</div>
         </div>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Experience</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Experience
+          </div>
           <div className="col-md-10 right-text">{experience}</div>
         </div>
         <br />
         <h6>Breeding</h6>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Gender</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Gender
+          </div>
           <div className="col-md-10 right-text">
             {genderRate.isGenderless ? (
               "Genderless"
@@ -111,7 +168,13 @@ export default function PokemonAbout({
         </div>
         <br />
         <div className="row">
-          <div className="col-md-2 left-text">Egg Groups</div>
+          <div
+            className={`col-md-2 ${
+              settings.theme === "dark" ? "left-text-dark" : "left-text"
+            }`}
+          >
+            Egg Groups
+          </div>
           <div className="col-md-10 right-text">
             {specieData.egg_groups.map((group) => group.name).join(", ")}
           </div>

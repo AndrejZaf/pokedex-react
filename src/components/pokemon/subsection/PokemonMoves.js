@@ -1,8 +1,14 @@
 import React from "react";
+import useSettings from "../../../hooks/useSettings";
 
 export default function PokemonMoves({ moves }) {
+  const { settings } = useSettings();
   return (
-    <table className="table table-striped">
+    <table
+      className={`table ${
+        settings.theme === "dark" ? "table-dark" : ""
+      }  table-striped`}
+    >
       <thead>
         <tr>
           <th scope="col">#</th>

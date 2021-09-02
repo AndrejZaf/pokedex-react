@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import useSettings from "../../../hooks/useSettings";
 import { highestStats } from "../../../static/stats";
 
 export default function PokemonBaseStats({ stats }) {
   const [pokeStats, setPokeStats] = useState(stats);
+  const { settings } = useSettings();
   useEffect(() => {
     const totalStat = stats.reduce((total, stat) => total + stat.base_stat, 0);
     setPokeStats([
@@ -67,7 +69,9 @@ export default function PokemonBaseStats({ stats }) {
         return (
           <div className="row" key={index}>
             <div
-              className={`col-md-2 stat-name ${
+              className={`col-md-2 ${
+                settings.theme === "dark" ? "stat-name-dark" : "state-name"
+              } ${
                 statItem.stat.name === "hp"
                   ? "text-uppercase"
                   : "text-capitalize"

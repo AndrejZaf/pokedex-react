@@ -1,27 +1,57 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Spinner from "../common/spinner/Spinner";
 import pokeball from "../../static/images/pokeball-pokemon-svgrepo-com.svg";
+import useSettings from "../../hooks/useSettings";
 
 export default function Header() {
   const [isLoading, setIsLoading] = useState(true);
   const [lightBulb, setLightBulb] = useState(false);
   const [cookie, setCookie] = useCookies(["theme"]);
+  const { settings, saveSettings } = useSettings();
 
   useEffect(() => {
     setLightBulb((state) => {
       state = cookie.theme === "true";
+      saveSettings({ theme: determineThemeColor(cookie.theme) });
+      changeTheme(determineThemeColor(cookie.theme));
       return state;
     });
     setIsLoading(false);
   }, []);
 
+  function determineThemeColor(theme) {
+    return theme === "true" ? "dark" : "light";
+  }
+
+  function changeTheme(name) {
+    if (name === "dark") {
+      document.body.style.backgroundColor = "#343a40";
+      document.body.style.color = "white";
+    }
+    if (name === "light") {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+    }
+  }
+
+  function updateClasses() {
+    if (settings.theme === "dark") {
+      return "light";
+    }
+    if (settings.theme === "light") {
+      return "dark";
+    }
+  }
+
   function handleOnChange(event) {
     const today = new Date();
-
     setLightBulb(event.target.checked);
+    updateClasses();
+    changeTheme(determineThemeColor(`${event.target.checked}`));
+    saveSettings({ theme: determineThemeColor(lightBulb) });
     setCookie("theme", event.target.checked, {
       path: "/",
       expires: new Date(today.setDate(today.getDate() + 5)),
@@ -32,29 +62,40 @@ export default function Header() {
 
   return (
     <div className="container">
-      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
-        <Link
+      <header
+        className={`d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 text-white border-bottom`}
+      >
+        <NavLink
           to="/"
           className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
         >
           <img src={pokeball} className="custom-image" alt="pokeball" />
-        </Link>
+        </NavLink>
 
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li>
-            <Link to="/" className="nav-link px-2 link-secondary">
+            <NavLink
+              to="/"
+              className={`nav-link px-2 link-${lightBulb ? "light" : "dark"}`}
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/pokedex" className="nav-link px-2 link-dark">
+            <NavLink
+              to="/pokedex"
+              className={`nav-link px-2 link-${lightBulb ? "light" : "dark"}`}
+            >
               Pokedex
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="nav-link px-2 link-dark">
+            <NavLink
+              to="/about"
+              className={`nav-link px-2 link-${lightBulb ? "light" : "dark"}`}
+            >
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
 

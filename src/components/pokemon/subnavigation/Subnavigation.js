@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSettings from "../../../hooks/useSettings";
 
 const defaultState = {
   about: { name: "About", isActive: false },
@@ -12,6 +13,7 @@ export default function Subnavigation({ color, setCurrentActiveButton }) {
     baseStats: { name: "Base Stats", isActive: false },
     moves: { name: "Moves", isActive: false },
   });
+  const { settings } = useSettings();
 
   function onNavigationClickHandle(buttonName) {
     if (buttonName === buttonToggleMenu.about.name) {
@@ -44,9 +46,13 @@ export default function Subnavigation({ color, setCurrentActiveButton }) {
       <div className="d-flex justify-content-evenly">
         <div
           onClick={() => onNavigationClickHandle(buttonToggleMenu.about.name)}
-          className={`custom-button about-section ${
+          className={`${
+            settings.theme === "dark" ? "custom-button-dark" : "custom-button"
+          } about-section ${
             buttonToggleMenu.about.isActive
-              ? `active ${color.flatColor}`
+              ? `${settings.theme === "dark" ? "active-dark" : "active"} ${
+                  color.flatColor
+                }`
               : "null"
           }`}
         >
@@ -56,10 +62,14 @@ export default function Subnavigation({ color, setCurrentActiveButton }) {
           onClick={() =>
             onNavigationClickHandle(buttonToggleMenu.baseStats.name)
           }
-          className={`custom-button base-stats-section ${
+          className={`${
+            settings.theme === "dark" ? "custom-button-dark" : "custom-button"
+          } about-section ${
             buttonToggleMenu.baseStats.isActive
-              ? `active ${color.flatColor}`
-              : ""
+              ? `${settings.theme === "dark" ? "active-dark" : "active"} ${
+                  color.flatColor
+                }`
+              : "null"
           }`}
         >
           {buttonToggleMenu.baseStats.name}
@@ -67,8 +77,14 @@ export default function Subnavigation({ color, setCurrentActiveButton }) {
 
         <div
           onClick={() => onNavigationClickHandle(buttonToggleMenu.moves.name)}
-          className={`custom-button moves-section ${
-            buttonToggleMenu.moves.isActive ? `active ${color.flatColor}` : ""
+          className={`${
+            settings.theme === "dark" ? "custom-button-dark" : "custom-button"
+          } about-section ${
+            buttonToggleMenu.moves.isActive
+              ? `${settings.theme === "dark" ? "active-dark" : "active"} ${
+                  color.flatColor
+                }`
+              : "null"
           }`}
         >
           {buttonToggleMenu.moves.name}

@@ -14,6 +14,18 @@ html {
   padding-right: 5%;
   padding-left: 5%;
 }
+
+.bottom-container-dark {
+  margin-top: -40px;
+  background-color: rgb(52, 58, 64);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding-top: 70px;
+  padding-right: 5%;
+  padding-left: 5%;
+  color: white;
+}
+
 .pokemon-image {
   width: 250px;
 }
@@ -180,8 +192,20 @@ html {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.custom-button-dark {
+  margin: 0.25rem 0.125rem;
+  padding: 0.5rem 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .active {
   color: rgba(0, 0, 0, 1);
+}
+
+.active-dark {
+  color: rgba(255, 255, 255, 1);
 }
 
 .bottom-content {
@@ -237,11 +261,16 @@ html {
 }
 
 .progress-bar-black {
-  background-color: #383a38 !important;
+  background-color: #606160 !important;
 }
 
 .left-text {
   color: #6c757d;
+  font-weight: 600;
+}
+
+.left-text-dark {
+  color: #9ea6ad;
   font-weight: 600;
 }
 
@@ -252,6 +281,11 @@ html {
 
 .stat-name {
   color: #6c757d;
+  font-weight: 600;
+}
+
+.stat-name-dark {
+  color: #b5b8bb;
   font-weight: 600;
 }
 

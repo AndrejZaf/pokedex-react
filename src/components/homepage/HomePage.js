@@ -8,11 +8,13 @@ import mewtwo from "../../static/images/mewtwo150.png";
 import heracross from "../../static/images/heracross.png";
 import katrana from "../../static/images/katrana.png";
 import { Link } from "react-router-dom";
+import useSettings from "../../hooks/useSettings";
 
 export default function HomePage(props) {
   const [searchBarValue, setSearchBarValue] = useState("");
   const [autoFillData, setAutoFillData] = useState([]);
   const [formError, setFormError] = useState(false);
+  const { settings } = useSettings();
 
   function onHandleChange(event) {
     if (formError) {
@@ -132,7 +134,11 @@ export default function HomePage(props) {
             <Link
               to="/pokemon/150"
               type="button"
-              className="btn btn-outline-purple"
+              className={`btn ${
+                settings.theme === "dark"
+                  ? "btn-outline-purple-dark"
+                  : "btn-outline-purple"
+              }`}
             >
               Mewtwo Pokemon
             </Link>
@@ -152,7 +158,11 @@ export default function HomePage(props) {
             <Link
               to="/pokemon/214"
               type="button"
-              className="btn btn-outline-blue"
+              className={`btn ${
+                settings.theme === "dark"
+                  ? "btn-outline-blue-dark"
+                  : "btn-outline-blue"
+              }`}
             >
               Heracross Pokemon
             </Link>
@@ -171,7 +181,11 @@ export default function HomePage(props) {
             <Link
               to="/pokemon/798"
               type="button"
-              className="btn btn-outline-white"
+              className={`btn ${
+                settings.theme === "dark"
+                  ? "btn-outline-white-dark"
+                  : "btn-outline-white"
+              }`}
             >
               Kartana Pokemon
             </Link>
