@@ -28,7 +28,7 @@ export default function MiniPokeDex() {
   return (
     <div className="row">
       {data.map((item, index) => (
-        <>
+        <React.Fragment key={index + 1}>
           {index % 4 === 0 && index !== 0 ? (
             <div className="w-100"></div>
           ) : null}
@@ -47,7 +47,7 @@ export default function MiniPokeDex() {
               />
             </Link>
           </div>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

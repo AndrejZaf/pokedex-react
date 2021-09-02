@@ -53,7 +53,7 @@ export default function PokeDex() {
       >
         <div className="row" key={rowIndex}>
           {data.map((item, index) => (
-            <>
+            <React.Fragment key={index + 1}>
               {index % 4 === 0 && index !== 0 ? (
                 <div className="w-100"></div>
               ) : null}
@@ -72,7 +72,7 @@ export default function PokeDex() {
                   />
                 </Link>
               </div>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </InfiniteScroll>

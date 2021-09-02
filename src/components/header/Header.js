@@ -1,9 +1,35 @@
-import React from "react";
-import pokeball from "../../static/images/pokeball-pokemon-svgrepo-com.svg";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import Spinner from "../common/spinner/Spinner";
+import pokeball from "../../static/images/pokeball-pokemon-svgrepo-com.svg";
 
 export default function Header() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [lightBulb, setLightBulb] = useState(false);
+  const [cookie, setCookie] = useCookies(["theme"]);
+
+  useEffect(() => {
+    setLightBulb((state) => {
+      state = cookie.theme === "true";
+      return state;
+    });
+    setIsLoading(false);
+  }, []);
+
+  function handleOnChange(event) {
+    const today = new Date();
+
+    setLightBulb(event.target.checked);
+    setCookie("theme", event.target.checked, {
+      path: "/",
+      expires: new Date(today.setDate(today.getDate() + 5)),
+    });
+  }
+
+  if (isLoading) return <Spinner />;
+
   return (
     <div className="container">
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
@@ -32,7 +58,17 @@ export default function Header() {
           </li>
         </ul>
 
-        <div className="col-md-3 text-end"></div>
+        <div className="col-md-3 d-flex justify-content-end">
+          <div className="form-check form-switch">
+            <input
+              checked={lightBulb}
+              onChange={handleOnChange}
+              className="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckDefault"
+            />
+          </div>
+        </div>
       </header>
     </div>
   );
