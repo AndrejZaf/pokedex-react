@@ -14,10 +14,9 @@ export default function Header() {
 
   useEffect(() => {
     setLightBulb((state) => {
-      state = cookie.theme === "true";
       saveSettings({ theme: determineThemeColor(cookie.theme) });
       changeTheme(determineThemeColor(cookie.theme));
-      return state;
+      return cookie.theme === "true";
     });
     setIsLoading(false);
   }, []);
