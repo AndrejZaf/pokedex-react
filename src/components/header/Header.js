@@ -51,7 +51,7 @@ export default function Header() {
     setLightBulb(event.target.checked);
     updateClasses();
     changeTheme(determineThemeColor(`${event.target.checked}`));
-    saveSettings({ theme: determineThemeColor(lightBulb) });
+    saveSettings({ theme: determineThemeColor(`${event.target.checked}`) });
     setCookie("theme", event.target.checked, {
       path: "/",
       expires: new Date(today.setDate(today.getDate() + 5)),
