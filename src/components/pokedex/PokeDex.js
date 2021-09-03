@@ -44,6 +44,7 @@ export default function PokeDex() {
         dataLength={data.length} //This is important field to render the next data
         next={fetchData}
         hasMore={hasMoreData}
+        style={{ overflowX: "hidden" }}
         loader={<h4>Loading...</h4>}
         endMessage={
           <p style={{ textAlign: "center" }}>
