@@ -1,0 +1,12 @@
+.dark {
+  background-color: rgb(52, 58, 64) !important;
+}
+
+.card-header {
+  background-color: unset !important;
+  border-bottom: unset !important;
+}
+
+.card {
+  border: unset !important;
+}

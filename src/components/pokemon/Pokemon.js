@@ -12,6 +12,8 @@ import PokemonBaseStats from "./subsection/PokemonBaseStats";
 import PokemonMoves from "./subsection/PokemonMoves";
 import Spinner from "../common/spinner/Spinner";
 import useSettings from "../../hooks/useSettings";
+import { decrement, increment } from "../../redux/action/index";
+import { useDispatch } from "react-redux";
 
 export default function Pokemon(props) {
   const [data, setData] = useState({});
@@ -22,6 +24,7 @@ export default function Pokemon(props) {
   const [heightCalculation, setHeightCalculation] = useState({});
   const [color, setColor] = useState({});
   const { settings } = useSettings();
+  const dispatch = useDispatch();
 
   // const { settings } = useSettings();
 
@@ -35,7 +38,6 @@ export default function Pokemon(props) {
     const index = props.match.params.index;
     const pokemonData = getPokemonById(index);
     const pokemonSpecies = getPokemonSpeciesById(index);
-
     Promise.all([pokemonData, pokemonSpecies]).then((responses) => {
       setData(responses[0].data);
       setWeightCalculation(calculateWeight(responses[0].data.weight));

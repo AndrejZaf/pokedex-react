@@ -7,13 +7,20 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CookiesProvider } from "react-cookie";
 import { SettingsProvider } from "./context/Settings";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import allReducers from "./redux/allReducers";
+
+const store = createStore(allReducers);
 
 ReactDOM.render(
   <Router>
     <CookiesProvider>
-      <SettingsProvider>
-        <App />
-      </SettingsProvider>
+      <Provider store={store}>
+        <SettingsProvider>
+          <App />
+        </SettingsProvider>
+      </Provider>
     </CookiesProvider>
   </Router>,
   document.getElementById("root")

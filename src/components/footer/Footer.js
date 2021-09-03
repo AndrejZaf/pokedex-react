@@ -6,7 +6,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="container">
-      <footer className="d-flex flex-wrap justify-content-between align-items-center mt-5 py-3 border-top">
+      <footer className="footer d-flex flex-wrap justify-content-between align-items-center mt-5 py-3 border-top">
         <div>
           <img src={pokemon} className="custom-image-pokemon" alt="pokemon" />
         </div>
