@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import "./PokeDexCard.css";
 
 const IMAGE_URL =
@@ -6,7 +6,7 @@ const IMAGE_URL =
 export default function PokeDexCard({ index, name, color }) {
   const [cardColor, setCardColor] = useState({});
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setCardColor(determinePokemonColor(color));
   }, []);
 

@@ -25,6 +25,12 @@
   animation: shake 1.25s infinite;
 }
 
+.loader {
+  position: relative;
+  width: 100%;
+  padding-top: 35%;
+}
+
 .pokeball::before,
 .pokeball::after {
   content: "";
