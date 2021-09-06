@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import { useCookies } from "react-cookie";
 import Spinner from "../common/spinner/Spinner";
 import pokeball from "../../static/images/pokeball-pokemon-svgrepo-com.svg";
 import useSettings from "../../hooks/useSettings";
@@ -9,14 +8,14 @@ import useSettings from "../../hooks/useSettings";
 export default function Header() {
   const [isLoading, setIsLoading] = useState(true);
   const [lightBulb, setLightBulb] = useState(false);
-  const [cookie, setCookie] = useCookies(["theme"]);
   const { settings, saveSettings } = useSettings();
 
   useEffect(() => {
-    setLightBulb((state) => {
-      saveSettings({ theme: determineThemeColor(cookie.theme) });
-      changeTheme(determineThemeColor(cookie.theme));
-      return cookie.theme === "true";
+    const theme = localStorage.getItem("theme") ?? "light";
+    setLightBulb(() => {
+      saveSettings({ theme: theme });
+      changeTheme(theme);
+      return theme === "dark";
     });
     setIsLoading(false);
   }, []);
@@ -46,15 +45,11 @@ export default function Header() {
   }
 
   function handleOnChange(event) {
-    const today = new Date();
     setLightBulb(event.target.checked);
     updateClasses();
     changeTheme(determineThemeColor(`${event.target.checked}`));
     saveSettings({ theme: determineThemeColor(`${event.target.checked}`) });
-    setCookie("theme", event.target.checked, {
-      path: "/",
-      expires: new Date(today.setDate(today.getDate() + 5)),
-    });
+    localStorage.setItem("theme", `${event.target.checked ? "dark" : "light"}`);
   }
 
   if (isLoading) return <Spinner />;

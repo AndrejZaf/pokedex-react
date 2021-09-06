@@ -23,8 +23,6 @@ export default function Pokemon(props) {
   const [color, setColor] = useState({});
   const { settings } = useSettings();
 
-  // const { settings } = useSettings();
-
   const [genderRate, setGenderRate] = useState({
     malePercentage: 0,
     femalePercentage: 0,
