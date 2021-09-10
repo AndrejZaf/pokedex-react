@@ -11,6 +11,7 @@ export default function PokemonBaseStats({ stats }) {
       ...pokeStats,
       { base_stat: totalStat, stat: { name: "total-stats" } },
     ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function getHighestStatByName(name) {

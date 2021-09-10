@@ -42,6 +42,7 @@ export default function Pokemon(props) {
       setColor(determinePokemonColor(determineColor(responses[0].data.name)));
       setIsLoading(false);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function setCurrentActiveButton(buttonName) {

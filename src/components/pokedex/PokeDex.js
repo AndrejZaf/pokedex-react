@@ -19,6 +19,7 @@ export default function PokeDex() {
       setIsLoading(false);
     });
     setOffset(offset + API_LIMIT);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function fetchData() {
@@ -54,26 +55,21 @@ export default function PokeDex() {
       >
         <div className="row" key={rowIndex}>
           {data.map((item, index) => (
-            <React.Fragment key={index + 1}>
-              {index % 4 === 0 && index !== 0 ? (
-                <div className="w-100"></div>
-              ) : null}
-              <div className="col-lg-3 col-sm-6" key={index + 1}>
-                <Link
-                  to={`/pokemon/${index + 1}`}
-                  style={{ textDecoration: "none" }}
+            <div className="col-lg-3 col-sm-6 mb-4" key={index + 1}>
+              <Link
+                to={`/pokemon/${index + 1}`}
+                style={{ textDecoration: "none" }}
+                key={index + 1}
+              >
+                <PokeDexCard
                   key={index + 1}
-                >
-                  <PokeDexCard
-                    key={index + 1}
-                    index={index + 1}
-                    name={item.name}
-                    image={item}
-                    color={determineColor(item.name)}
-                  />
-                </Link>
-              </div>
-            </React.Fragment>
+                  index={index + 1}
+                  name={item.name}
+                  image={item}
+                  color={determineColor(item.name)}
+                />
+              </Link>
+            </div>
           ))}
         </div>
       </InfiniteScroll>

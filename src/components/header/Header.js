@@ -18,6 +18,7 @@ export default function Header() {
       return theme === "dark";
     });
     setIsLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function determineThemeColor(theme) {

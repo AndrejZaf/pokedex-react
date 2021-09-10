@@ -8,6 +8,7 @@ export default function PokeDexCard({ index, name, color }) {
 
   useLayoutEffect(() => {
     setCardColor(determinePokemonColor(color));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function determinePokemonColor() {
