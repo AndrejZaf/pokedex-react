@@ -11,7 +11,7 @@
 <p align="center">
     <b>My very first React application (Just the README has been added years later) - front end application that consumes the Poke API.
     <br />
-    Currently it's rewritten completely in NextJS - <a href="https://github.com/AndrejZaf/pokedex_next">Pokedex - NextJS.
+    Completely rewritten in NextJS - <a href="https://github.com/AndrejZaf/pokedex_next">Pokedex - NextJS.
 </b> 
 </p>
 
